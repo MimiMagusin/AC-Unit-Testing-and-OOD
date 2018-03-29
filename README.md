@@ -12,13 +12,11 @@
 <br/>
 
 ## Unit Testing
-<hr/>
 
 
 <br/><br/>
 
 ## SOLID Principles
-<hr/>
 
 ![Solid Explanation](https://devscopeninjas.azurewebsites.net/wp-content/uploads/2017/04/Solid-1024x283-1024x283.jpg)
 
@@ -37,7 +35,6 @@
 <br/><br/>
 
 ## Separation of concerns
-<hr/>
 
 Theres two structures: 
 
@@ -58,7 +55,6 @@ Imagine the first would be a 'mail' module and the second an 'auth' module, you 
 <br/><br/>
 
 ## Dynamically vs Statically Typed
-<hr/>
 
 * **Dynamically typed** - types are checked _in run time_.
   * Duck typing: if it quacks like a duck and it looks like duck it probably is duck, but we are not going to check.
@@ -67,7 +63,7 @@ Imagine the first would be a 'mail' module and the second an 'auth' module, you 
 <br/><br/>
 
 ## Interesting Sources
-<hr/>
+
 
 * [The Clean Code Talks: Unit Testing](https://www.youtube.com/watch?v=wEhu57pih5w)
 * [Solid Cheat Sheets](https://www.monterail.com/blog/solid-principles-cheatsheet-printable)
