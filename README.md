@@ -11,6 +11,29 @@
 
 <br/>
 
+## Types of tests
+![Types of test](https://pbs.twimg.com/media/CevWKfrW4AAeJjK.jpg:large)
+_1) **Manual/Exploratory tests** (Manual test technique, can't be automated)_
+
+_2) **End to end tests** (The whole system from one end to another end)_
+
+_3) **Integration tests** (Realy calls the db, test multiple components)_
+
+_4) **Components tests** (Testing multiple units)_
+
+_5) **Unit tests** (Smallest test possible)_
+
+### The V-model
+![The V model](https://thumb7.shutterstock.com/display_pic_with_logo/4082620/427973527/stock-vector-v-model-software-development-427973527.jpg)
+
+_The higher you get, the slower your tests are_
+
+### Contemporary ways of testing
+![UI/Service/Unit](https://martinfowler.com/bliki/images/testPyramid/test-pyramid.png)
+
+
+<br><br>
+
 ## Unit Testing
 ### What is unit testing?
 * Testing the **smallest testable part** of a system (Could be method, a class, a module, etc.) in isolation.
@@ -19,11 +42,62 @@
 * It is about **verifying expectations** - does this do what I expect it does?
 * Unit testing helps not only to reduce bugs, but also **reduce bug-fix-time**.
 
-### How it works?
-1) You have a **test runner** (such as Jest, Enzyme, JRUby) which has a
+### How does it work?
+1) You have a **test runner** (such as Jest, Enzyme, JRuby) which has a
 2) **Test framework** (with some helper methods such as `expect`)
 3) The test runner runs your **test class** (test code) which verifies your **production code**.
 
+### How to use it:
+#### How To Fix A Bug
+1) Reproduce it with a (new) unit tests(s). (The test should fail)
+2) Fix your production code.
+3) Run all your tests. All should pass.
+
+#### How to commit your code
+1) (Code should compile/build)
+2) Run all Unit Tests
+3) If all tests pass: Commit. Else, fix code to make test pass.
+
+### What to test:
+* **Boundaries** (min, max, exactly)
+* **Error-conditions**
+* **Happy Path**
+* **Dependencies**
+* ( **Properties** (such as get/set) - _topic of debate_)
+
+### How to structure your test:
+1) You set up an environment (**Arrange**)
+2) You perform a certain action (**Action**)
+3) You verify your expectation (**Assert**)
+
+_Use only one Assert per test!_
+
+<br/><br/>
+
+## Fakes
+
+Fakes are tools to write (UNIT) tests, to manage dependencies, to not let good design interfere with your testability.
+
+### Fake Object
+* Always returns a constant
+```
+when object.doSomething(anyArgument) then 
+  return "Foo"
+```
+### Stubs
+* Returns default (or predefined) output
+
+```
+when object.doSomething("Foo" ) then 
+  return "Bar"
+```
+
+### Mocks
+* Verify interactions
+```
+when object.doSomething("Barz") then
+  return "Has been clicked"
+```
 
 <br/><br/>
 
@@ -33,6 +107,7 @@
 
 ### Single Responsibility Principle
 * Anything (function, model, class, etc.) should only have **one reason to change**.
+* Closely connected to the idea of **separation of concerns**.
 
 ### Dependency Inversion Principle
 * **Dependency injection** is an implementation of this principle
@@ -43,10 +118,11 @@
 
   _A service namespace might depend on a model and parsers, the parsers on a model, but the model shouldn't also depend on the service or parsers!_
 
+* **Regression**: you introduce something new and code you wrote before fails
+
 <br/><br/>
 
 ## Separation of concerns
-
 Given are two structures: 
 
   * Presentation Layer
