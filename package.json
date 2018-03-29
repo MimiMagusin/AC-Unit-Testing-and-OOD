@@ -1,0 +1,15 @@
+{
+  "name": "UnitTestingAndSolidDesign",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:MimiMag/AC-Unit-Testing-and-OOD.git",
+  "author": "MimiMagusin <mimi_magusin@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^22.4.3",
+    "underscore-node": "^0.1.2"
+  },
+  "scripts": {
+    "test": "jest --watchAll"
+  }
+}
