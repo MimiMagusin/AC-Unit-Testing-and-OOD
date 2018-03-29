@@ -12,6 +12,17 @@
 <br/>
 
 ## Unit Testing
+### What is unit testing?
+* Testing the **smallest testable part** of a system (Could be method, a class, a module, etc.) in isolation.
+
+### Why?
+* It is about **verifying expectations** - does this do what I expect it does?
+* Unit testing helps not only to reduce bugs, but also **reduce bug-fix-time**.
+
+### How it works?
+1) You have a **test runner** (such as Jest, Enzyme, JRUby) which has a
+2) **Test framework** (with some helper methods such as `expect`)
+3) The test runner runs your **test class** (test code) which verifies your **production code**.
 
 
 <br/><br/>
@@ -36,7 +47,7 @@
 
 ## Separation of concerns
 
-Theres two structures: 
+Given are two structures: 
 
   * Presentation Layer
   * Logic layer
@@ -48,9 +59,9 @@ Theres two structures:
   * Logic Layer
   * Data Access Layer
 
-Are both **connected vertically**.
+They are both **connected vertically** in terms of dependencies.
 
-Imagine the first would be a 'mail' module and the second an 'auth' module, you could also **connect them horizontally** - the Micro Services SetUp.
+Imagine the first would be a `mail` module and the second an `auth` module, you could also **connect them horizontally** - the Micro Services SetUp.
 
 <br/><br/>
 
