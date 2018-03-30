@@ -154,3 +154,5 @@ Imagine the first would be a `mail` module and the second an `auth` module, you 
 
 * [The Clean Code Talks: Unit Testing](https://www.youtube.com/watch?v=wEhu57pih5w)
 * [Solid Cheat Sheets](https://www.monterail.com/blog/solid-principles-cheatsheet-printable)
+
+> _This Repository is created by Mimi Magusin. Her personal profile can be found [here](https://github.com/MimiMagusin), her Codaisseur Profile can be found [here](https://github.com/MimiMag)._
